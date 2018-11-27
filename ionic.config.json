@@ -1,5 +1,6 @@
 {
-  "name": "Scriba-App",
+  "name": "MyNotes",
   "integrations": {},
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "pro_id": "c782f273"
 }

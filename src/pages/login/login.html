@@ -1,0 +1,36 @@
+<ion-header>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides>
+    <ion-slide>
+      <img src='../assets/imgs/scriba_logo.png'>
+      <h1>¡Hola!</h1>
+    </ion-slide>
+    <ion-slide>
+      <h4 text-center margin-top>¡Inicia sesión o Regístrate!</h4>
+
+      <ion-item>
+        <ion-label fixed>Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <div text-center margin-top>
+        <button ion-button margin-right (click)="signUp()">
+          REGISTRARSE
+        </button>
+
+        <button ion-button color="secondary" (click)="signIn()">
+          INGRESAR
+        </button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

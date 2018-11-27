@@ -13,7 +13,6 @@ log.txt
 npm-debug.log*
 
 .idea/
-.ionic/
 .sourcemaps/
 .sass-cache/
 .tmp/
@@ -23,12 +22,15 @@ dist/
 node_modules/
 tmp/
 temp/
+hooks/
 platforms/
 plugins/
 plugins/android.json
 plugins/ios.json
 www/
 $RECYCLE.BIN/
+
+src/assets/imgs/
 
 .DS_Store
 Thumbs.db
