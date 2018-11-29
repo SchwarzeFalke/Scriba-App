@@ -8,23 +8,22 @@
 
 
 <ion-content padding>
-  <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)">
-    <ion-item>
-      <ion-label>Fecha</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>
-    </ion-item>
-    <ion-item>
-      <ion-label>Título</ion-label>
-      <ion-input type="text" name="title" formControlName="title" required></ion-input>
-      <div class="alert" *ngIf="!formGroup.controls['title'].valid
-        && formGroup.controls['title'].touched">{{ titleAlert }}</div>
-    </ion-item>
-    <ion-item>
-      <ion-label>Nota</ion-label>
-      <ion-input type="text" name="content" formControlName="content" required></ion-input>
-      <div class="alert" *ngIf="!formGroup.controls['content'].valid
-        && formGroup.controls['content'].touched">{{ contentAlert }}</div>
-    </ion-item>
-    <button ion-button type="submit" [disabled]="!formGroup.valid">Guardar Nota</button>
-  </form>
+  <ion-item>
+    <ion-label fixed>Fecha</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="date">Fecha</ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Título</ion-label>
+    <ion-input type="text" [(ngModel)]="title" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed>Nota</ion-label>
+    <ion-input type="text" [(ngModel)]="content" required></ion-input>
+  </ion-item>
+
+  <div text-center margin-top>
+    <button ion-button margin-right (click)="saveNote()" round>
+      Añadir Nota
+    </button>
+  </div>
 </ion-content>

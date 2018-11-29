@@ -8,7 +8,7 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createDate)">
+    <button ion-item *ngFor="let note of notes" (click)="getNote()">
       <span class="date">{{ note.date }}</span>
       {{ note.title }}
     </button>

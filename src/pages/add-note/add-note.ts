@@ -2,7 +2,7 @@
  * @Author: schwarze_falke
  * @Date:   2018-11-27T00:29:18-06:00
  * @Last modified by:   schwarze_falke
- * @Last modified time: 2018-11-28T21:28:04-06:00
+ * @Last modified time: 2018-11-29T01:17:03-06:00
  */
 
 import { Component } from '@angular/core';
@@ -11,6 +11,7 @@ import { NoteService } from '../../providers/note-service/note-service';
 import { Note } from '../../models/note.model';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -18,22 +19,24 @@ import { Http, Headers, RequestOptions } from '@angular/http';
   templateUrl: 'add-note.html',
 })
 export class AddNotePage {
-  formGroup: FormGroup;
-  note: Note;
-  date: Date = new Date();
-  title: string = '';
-  content: string = '';
+  home = HomePage;
+  date = '';
+  title = '';
+  content = '';
 
-  constructor(public navCtrl: NavController, private NoteService: NoteService) {
-    this.formGroup = new FormGroup({
-      title: new FormControl(),
-      content: new FormControl(),
-      date: new FormControl(),
-    })
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private NoteService: NoteService,
+              private http: Http) {
   }
 
-  saveNote(note: Note) {
-    this.NoteService.saveNote(note);
-    this.navCtrl.pop();
+  saveNote() {
+    let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    let options = new RequestOptions({ headers: headers });
+    this.http.post('http://localhost:3000/create',
+                  `title=${this.title}&date=${this.date}&body=${this.content}&userId=${this.navParams.get('userId')}`,
+                  options).subscribe(res => {
+                    this.navCtrl.setRoot(this.home, this.navParams = {userId: this.navParams.get('userId')});
+                  });
   }
 }
