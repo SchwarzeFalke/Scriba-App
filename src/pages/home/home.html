@@ -1,14 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      My Notes
+      Mis Notas
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let note of notes" (click)="getNote()">
+    <button ion-item *ngFor="let note of noteService.notes" (click)="getNote(note)">
       <span class="date">{{ note.date }}</span>
       {{ note.title }}
     </button>

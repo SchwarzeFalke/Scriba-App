@@ -1,10 +1,11 @@
 // @Author: schwarze_falke
 // @Date:   2018-11-26T23:26:10-06:00
 // @Last modified by:   schwarze_falke
-// @Last modified time: 2018-11-27T00:26:29-06:00
+// @Last modified time: 2018-11-29T14:10:51-06:00
 
 page-add-note {
   ion-content {
+    background: url(../assets/imgs/bg-1.jpg) no-repeat center fixed;
     background-size: cover;
     &:before {
       content: '';

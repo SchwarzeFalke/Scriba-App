@@ -1,6 +1,13 @@
+// @Author: schwarze_falke
+// @Date:   2018-11-27T00:29:18-06:00
+// @Last modified by:   schwarze_falke
+// @Last modified time: 2018-11-29T14:08:30-06:00
+
+
+
 page-home {
     ion-content {
-        background: url(../assets/imgs/bg-1.jpeg) no-repeat center fixed;
+        background: url(../assets/imgs/bg-1.jpg) no-repeat center fixed;
         background-size: cover;
         &:before {
             content: '';
@@ -10,7 +17,7 @@ page-home {
             bottom: 0;
             left: 0;
             background-image: linear-gradient(to bottom right,#02362C,#003199);
-            opacity: .3; 
+            opacity: .3;
         }
     }
 
