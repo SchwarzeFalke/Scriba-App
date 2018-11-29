@@ -2,7 +2,7 @@
  * @Author: schwarze_falke
  * @Date:   2018-11-26T23:26:10-06:00
  * @Last modified by:   schwarze_falke
- * @Last modified time: 2018-11-27T00:15:11-06:00
+ * @Last modified time: 2018-11-28T11:45:58-06:00
  */
 
 
@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+
 @Component({
   templateUrl: 'app.html'
 })
