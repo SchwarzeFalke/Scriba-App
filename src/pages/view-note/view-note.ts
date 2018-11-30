@@ -2,7 +2,7 @@
  * @Author: schwarze_falke
  * @Date:   2018-11-27T00:29:18-06:00
  * @Last modified by:   schwarze_falke
- * @Last modified time: 2018-11-29T16:27:37-06:00
+ * @Last modified time: 2018-11-29T17:28:38-06:00
  */
 
 import { Component } from '@angular/core';

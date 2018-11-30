@@ -2,7 +2,7 @@
  * @Author: schwarze_falke
  * @Date:   2018-11-27T00:29:18-06:00
  * @Last modified by:   schwarze_falke
- * @Last modified time: 2018-11-29T16:23:08-06:00
+ * @Last modified time: 2018-11-29T17:32:57-06:00
  */
 
 import { Component } from '@angular/core';
@@ -36,7 +36,7 @@ export class HomePage {
 
   getNote(note) {
     this.userId = this.navParams.get('userId')
-    this.navCtrl.setRoot(ViewNotePage, this.navParams = { note: note, userId: this.userId });
+    this.navCtrl.push(ViewNotePage, this.navParams = { note: note, userId: this.userId });
   }
 
   async getAllNotes() {
